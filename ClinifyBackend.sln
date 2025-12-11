@@ -1,9 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend", "ClinifyBackend\ClinifyBackend.csproj", "{2BCFA974-AE74-482E-97E1-A72CC451BC51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend.API", "ClinifyBackend\ClinifyBackend.API.csproj", "{2BCFA974-AE74-482E-97E1-A72CC451BC51}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15FEAA34-E648-48C0-A553-7E3D1CC3404A} = {15FEAA34-E648-48C0-A553-7E3D1CC3404A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend.Application", "ClinifyBackend.Application\ClinifyBackend.Application.csproj", "{15FEAA34-E648-48C0-A553-7E3D1CC3404A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA} = {09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend.Domain", "ClinifyBackend.Domain\ClinifyBackend.Domain.csproj", "{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend.Infraestructure", "ClinifyBackend.Infraestructure\ClinifyBackend.Infraestructure.csproj", "{569E69B2-62E7-4776-B0BF-5DCC8F7C654A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA} = {09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}
+		{15FEAA34-E648-48C0-A553-7E3D1CC3404A} = {15FEAA34-E648-48C0-A553-7E3D1CC3404A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +31,18 @@ Global
 		{2BCFA974-AE74-482E-97E1-A72CC451BC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BCFA974-AE74-482E-97E1-A72CC451BC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BCFA974-AE74-482E-97E1-A72CC451BC51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15FEAA34-E648-48C0-A553-7E3D1CC3404A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15FEAA34-E648-48C0-A553-7E3D1CC3404A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15FEAA34-E648-48C0-A553-7E3D1CC3404A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15FEAA34-E648-48C0-A553-7E3D1CC3404A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569E69B2-62E7-4776-B0BF-5DCC8F7C654A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569E69B2-62E7-4776-B0BF-5DCC8F7C654A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569E69B2-62E7-4776-B0BF-5DCC8F7C654A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569E69B2-62E7-4776-B0BF-5DCC8F7C654A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
