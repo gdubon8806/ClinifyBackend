@@ -1,4 +1,15 @@
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowAnyOrigin(); // Permite llamadas desde cualquier sitio
+        });
+});
+
 
 // Add services to the container.
 
@@ -21,5 +32,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+app.UseCors("AllowFrontend");
 
 app.Run();
