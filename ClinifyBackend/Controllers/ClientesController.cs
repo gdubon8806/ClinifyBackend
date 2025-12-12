@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ClinifyBackend.Application.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ClinifyBackend.API.Controllers
 {
@@ -6,14 +7,18 @@ namespace ClinifyBackend.API.Controllers
     [Route("[controller]")]
     public class ClientesController : ControllerBase
     {
-        [HttpGet]
-        public IEnumerable<Cliente> Get()
+        private readonly ClienteService _service;
+
+        public ClientesController(ClienteService service)
         {
-            return new List<Cliente>
-            {
-                new Cliente { Id = 1, Nombre = "Juan Pérez", Correo = "juan@mail.com", Telefono = "555-1234" },
-                new Cliente { Id = 2, Nombre = "Ana Gómez", Correo = "ana@mail.com", Telefono = "555-5678" }
-            };
+            _service = service;
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var clientes = _service.ObtenerClientes();
+            return Ok(clientes);
         }
     }
 }

@@ -1,3 +1,9 @@
+// Add services to the container.
+using ClinifyBackend.Application.Interfaces;
+using ClinifyBackend.Application.Services;
+using ClinifyBackend.Infraestructure.Repositories;
+using ClinifyBackend.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
@@ -11,12 +17,23 @@ builder.Services.AddCors(options =>
 });
 
 
-// Add services to the container.
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<ClienteService>();
+
+builder.Services.AddScoped<ICitaRepository, CitaRepository>();
+builder.Services.AddScoped<CitaService>();
+
+builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
+builder.Services.AddScoped<DoctorService>();
 
 var app = builder.Build();
 

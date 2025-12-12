@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend.Application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend.Domain", "ClinifyBackend.Domain\ClinifyBackend.Domain.csproj", "{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend.Infraestructure", "ClinifyBackend.Infraestructure\ClinifyBackend.Infraestructure.csproj", "{569E69B2-62E7-4776-B0BF-5DCC8F7C654A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinifyBackend.Infrastructure", "ClinifyBackend.Infraestructure\ClinifyBackend.Infrastructure.csproj", "{569E69B2-62E7-4776-B0BF-5DCC8F7C654A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA} = {09F40B3B-7EC0-4D6B-A3E2-8BB9230777CA}
 		{15FEAA34-E648-48C0-A553-7E3D1CC3404A} = {15FEAA34-E648-48C0-A553-7E3D1CC3404A}
