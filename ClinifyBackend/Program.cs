@@ -2,6 +2,7 @@
 using ClinifyBackend.Application.Interfaces;
 using ClinifyBackend.Application.Services;
 using ClinifyBackend.Infraestructure.Repositories;
+using ClinifyBackend.Infrastructure.Adapters;
 using ClinifyBackend.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,6 +26,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+//Adapter pattern
+//builder.Services.AddScoped<IClienteRepository, ExternalClienteAdapter>();
 
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<ClienteService>();
